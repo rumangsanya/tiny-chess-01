@@ -120,12 +120,12 @@ def rt(g):
  bm=lg[0];d=1
  while 1:
   try:
-   a=-I
+   a=-I;b2=bm
    for m in lg:
     s=-sr(mv(pos,m),-I,-a,d-1,1)
-    if s>a:a=s;bm=m
+    if s>a:a=s;b2=m
   except Ab:break
-  d+=1
+  bm=b2;lg.remove(bm);lg.insert(0,bm);d+=1
  return uc(bm,blk)
 def po(pa,bo):return json.load(urlopen(Request(os.getenv("MAKEFUN_ENV_URL")+pa,data=json.dumps(bo).encode(),headers={"content-type":"application/json"})))
 if __name__=="__main__":
