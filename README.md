@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/tiny-chess-01/rumangsanya/tiny-chess-01/rank.svg)](https://make.fun/bounty/tiny-chess-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 [![reward](https://make.fun/badge/tiny-chess-01/rumangsanya/tiny-chess-01/reward.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 
-A chess engine in at most 4,096 bytes of Python (standard library only). It plays the make.fun house gauntlet through the contest env: iterative-deepening alpha-beta search with quiescence search, capture-first move ordering, and piece-square-table evaluation, all under a fixed node budget — no clock, no unseeded randomness, so every replay makes the same moves.
+A chess engine in at most 4,096 bytes of Python (standard library only). It plays the make.fun house gauntlet through the contest env: iterative-deepening alpha-beta search with quiescence search, capture-first move ordering, full castling, and piece-square-table evaluation (piece-square tables transplanted from a larger reference engine, with an endgame king blend). The search runs under a 150,000-node budget with a 5-second per-move wall-clock safeguard: when either limit bites, the best move of the last completed depth is played, so a legal move always comes back in time.
 
 ## Run it
 
